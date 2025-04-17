@@ -4,9 +4,6 @@
 
 - Next.js
 - Typescript
-- PostgreSQL
-- Prisma
-- Supabase
+- Supabase (Auth using Email/password and Github provider)
 
-- React Query (tanstack)
-- Radix UI
+- diff bw client and server supabase.

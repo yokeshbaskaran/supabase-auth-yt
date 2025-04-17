@@ -4,8 +4,8 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 import { AuthContextProvider } from "./context/AuthContext";
 import "@radix-ui/themes/styles.css";
-import { Theme, ThemePanel } from "@radix-ui/themes";
-
+import { Theme } from "@radix-ui/themes";
+import { Toaster } from "react-hot-toast";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -17,8 +17,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Moments",
-  description: "Capture the moments",
+  title: "Supabase Auth",
+  description: "Supabase Tutorials",
 };
 
 export default function RootLayout({
@@ -34,10 +34,14 @@ export default function RootLayout({
         <Theme>
           <AuthContextProvider>
             <Navbar />
-            <main> {children}</main>
+            <main className="h-screen flex justify-center items-center">
+              {" "}
+              {children}
+            </main>
           </AuthContextProvider>
-          <ThemePanel />
+          {/* <ThemePanel /> */}
         </Theme>
+        <Toaster />
       </body>
     </html>
   );

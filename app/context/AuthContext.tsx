@@ -46,6 +46,7 @@ export const AuthContextProvider = ({
   const signInWithGitHub = () => {
     supabase.auth.signInWithOAuth({ provider: "github" });
   };
+
   const signOut = () => {
     supabase.auth.signOut();
   };
